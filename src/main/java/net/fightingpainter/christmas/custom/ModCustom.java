@@ -6,6 +6,7 @@ import net.fightingpainter.christmas.Main;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,7 +18,7 @@ public class ModCustom {
     //globe
     public static Block GLOBE_BLOCK;
     public static Item GLOBE_ITEM;
-    public static BlockEntityType<Globe_BlockEntity> GLOBE_BLOCK_ENTITY_TYPE;
+    public static BlockEntityType<Snowglobe_BlockEntity> GLOBE_BLOCK_ENTITY_TYPE;
 
 
     public static void register() {
@@ -26,20 +27,20 @@ public class ModCustom {
         //globe
         GLOBE_BLOCK = Registry.register(
             Registries.BLOCK, 
-            new Identifier(Main.MOD_ID, "globe"), 
-            new Globe_Block(FabricBlockSettings.copy(Blocks.STONE).nonOpaque())
+            new Identifier(Main.MOD_ID, "snowglobe"), 
+            new Snowglobe_Block(FabricBlockSettings.copy(Blocks.STONE).nonOpaque())
         );
 
         GLOBE_ITEM = Registry.register(
             Registries.ITEM, 
-            new Identifier(Main.MOD_ID, "globe"), 
-            new Globe_Item(GLOBE_BLOCK, new FabricItemSettings())
+            new Identifier(Main.MOD_ID, "snowglobe"), 
+            new BlockItem(GLOBE_BLOCK, new FabricItemSettings())
         );
         
         GLOBE_BLOCK_ENTITY_TYPE = Registry.register(
             Registries.BLOCK_ENTITY_TYPE,
             new Identifier(Main.MOD_ID, "globe_entity"),
-            FabricBlockEntityTypeBuilder.create(Globe_BlockEntity::new, GLOBE_BLOCK).build()
+            FabricBlockEntityTypeBuilder.create(Snowglobe_BlockEntity::new, GLOBE_BLOCK).build()
         );
 
 

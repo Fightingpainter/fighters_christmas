@@ -1,8 +1,10 @@
 package net.fightingpainter.christmas;
 
 import net.fightingpainter.christmas.blocks.ModBlocks;
+import net.fightingpainter.christmas.commands.ModCommands;
 import net.fightingpainter.christmas.custom.ModCustom;
 import net.fightingpainter.christmas.items.ModItems;
+import net.fightingpainter.christmas.packets.server.ServerPacketReceiver;
 
 import net.fabricmc.api.ModInitializer;
 
@@ -19,8 +21,11 @@ public class Main implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing Fighters Christmas Mod | Merry Christmas!");
 
+		ModCommands.register(); //register commands
 		ModItems.register(); //register items
 		ModBlocks.register(); //register blocks
 		ModCustom.register(); //register custom stuff
+
+		ServerPacketReceiver.register(); //register server packet receiver
 	}
 }

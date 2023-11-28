@@ -18,6 +18,9 @@ repositories {
         url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
     }
 
+	//owolib
+	maven { url 'https://maven.wispforest.io' }
+
 }
 
 dependencies {
@@ -31,6 +34,11 @@ dependencies {
 	
 	//Geckolib
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20.1:4.2.2"
+
+	//owolib
+    modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+    include "io.wispforest:owo-sentinel:${project.owo_version}"
+
 }
 
 processResources {

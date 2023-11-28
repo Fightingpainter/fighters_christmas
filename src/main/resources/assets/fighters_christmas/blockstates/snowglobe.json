@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "snowing=true": { "model": "fighters_christmas:block/snowglobe_on"},
+      "snowing=false": { "model": "fighters_christmas:block/snowglobe_off"}
+    }
+}
