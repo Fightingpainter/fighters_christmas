@@ -1,20 +1,20 @@
 package net.fightingpainter.christmas.packets.client;
 
 import net.minecraft.util.Identifier;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fightingpainter.christmas.Main;
 import net.fightingpainter.christmas.packets.server.ServerPacket;
-import net.fightingpainter.christmas.packets.server.ServerPacketReceiver;
 import net.fightingpainter.christmas.screens.*;
 import net.minecraft.client.MinecraftClient;
 
+@Environment(EnvType.CLIENT)
 public class ClientPacketReceiver {
-
-    public static final String CLIENT_PACKET_NAME = "client_action";
 
     // Packet registration
     public static void register() {
-        ClientPlayNetworking.registerGlobalReceiver(new Identifier(Main.MOD_ID, ServerPacketReceiver.SERVER_PACKET_NAME), 
+        ClientPlayNetworking.registerGlobalReceiver(new Identifier(Main.MOD_ID, "server_response"), 
             (client, handler, buf, responseSender) -> {
                 // Handle the received packet
                 ServerPacket packet = ServerPacket.decode(buf);

@@ -14,19 +14,19 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Environment(EnvType.SERVER)
 public class ServerPacketReceiver {
-
-    public static final String SERVER_PACKET_NAME = "server_response";
     
     // Packet registration
     public static void register() {
-        ServerPlayNetworking.registerGlobalReceiver(new Identifier(Main.MOD_ID, ClientPacketReceiver.CLIENT_PACKET_NAME), (server, player, handler, buf, responseSender) -> {
+        ServerPlayNetworking.registerGlobalReceiver(new Identifier(Main.MOD_ID, "client_action"), (server, player, handler, buf, responseSender) -> {
             ClientPacket packet = ClientPacket.decode(buf);
             server.execute(() -> handle(packet, player));
         });

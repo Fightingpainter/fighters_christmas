@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fightingpainter.christmas.Main;
 
+
 public class ClientPacket {
 
     private final String action;
@@ -33,7 +34,7 @@ public class ClientPacket {
     public static void send(String action, int day) {
         PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
         encode(new ClientPacket(action, day), buf);
-        ClientPlayNetworking.send(new Identifier(Main.MOD_ID, ClientPacketReceiver.CLIENT_PACKET_NAME), buf);
+        ClientPlayNetworking.send(new Identifier(Main.MOD_ID, "client_action"), buf);
     }
 
 

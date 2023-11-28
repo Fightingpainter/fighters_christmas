@@ -52,7 +52,7 @@ public class ServerPacket {
     public static void send(ServerPlayerEntity player, int day, boolean collected, List<ItemStack> items) {
         PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
         encode(new ServerPacket(day, collected, items), buf);
-        ServerPlayNetworking.send(player, new Identifier(Main.MOD_ID, ServerPacketReceiver.SERVER_PACKET_NAME), buf);
+        ServerPlayNetworking.send(player, new Identifier(Main.MOD_ID, "server_response"), buf);
     }
 
 

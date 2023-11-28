@@ -17,7 +17,6 @@ import java.nio.file.Files;
 
 public class CalenderDataHandler {
 
-
     private static Path worldPath; //world directory path
     private static Path dayPath; //day directory path
     private static Path playerPath; //items per day file path

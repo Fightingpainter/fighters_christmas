@@ -14,14 +14,19 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
 
-    public static final ItemGroup MOD_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
-        new Identifier(Main.MOD_ID, "item_group"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup."+Main.MOD_ID+".item_group"))
-                .icon(() -> new ItemStack(ModCustom.GLOBE_ITEM)).build());
+    public static ItemGroup MOD_ITEM_GROUP; 
 
 
     public static void register() {
         Main.LOGGER.info("Registering Items");
+
+
+        Main.LOGGER.info("Registering Item Group");
+
+        MOD_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, 
+            new Identifier(Main.MOD_ID, "item_group"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup."+Main.MOD_ID+".item_group"))
+                .icon(() -> new ItemStack(ModCustom.GLOBE_ITEM)).build());
 
     }
 }
