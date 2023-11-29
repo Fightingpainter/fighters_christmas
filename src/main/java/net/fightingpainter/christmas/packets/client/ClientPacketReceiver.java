@@ -9,7 +9,6 @@ import net.fightingpainter.christmas.packets.server.ServerPacket;
 import net.fightingpainter.christmas.screens.*;
 import net.minecraft.client.MinecraftClient;
 
-@Environment(EnvType.CLIENT)
 public class ClientPacketReceiver {
 
     // Packet registration

@@ -9,7 +9,6 @@ public class ModCommands {
 
     public static void register() {
         Main.LOGGER.info("Registering Commands");
-
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> Calendar.register(dispatcher));
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> ModifyCalendar.register(dispatcher));
     }

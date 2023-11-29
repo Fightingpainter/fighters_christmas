@@ -21,7 +21,6 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import java.util.ArrayList;
 import java.util.List;
 
-@Environment(EnvType.SERVER)
 public class ServerPacketReceiver {
     
     // Packet registration
@@ -97,7 +96,7 @@ public class ServerPacketReceiver {
                 List<Integer> days = CalenderDataHandler.getMissedDays(player.getUuidAsString());
     
                 if (days.size() == 0) {
-                    player.sendMessage(Text.of("No days missed"), false);
+                    message = Text.literal("You didn't miss any days!").formatted(Formatting.BLUE);
                 } else {
                     message = Text.literal("Missed days: ").formatted(Formatting.BLUE);
                 

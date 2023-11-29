@@ -2,12 +2,20 @@ package net.fightingpainter.christmas.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fightingpainter.christmas.Main;
 import net.fightingpainter.christmas.packets.client.ClientPacket;
+import net.fightingpainter.christmas.packets.server.ServerPacketReceiver;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
+
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+
 
 public class Calendar {
 
@@ -32,34 +40,88 @@ public class Calendar {
         dispatcher.register(calendarCommand);
     }
 
-
     public static int runGetDay(CommandContext<ServerCommandSource> ctx, int day) {
-        // Code to get a specific advent calendar day
-        ClientPacket.send("get", day);
+
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) { //if on client side send packet
+            ClientPacket.send("get", day);
+        } 
+        else if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) { //if on server side handle packet directly
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+            ClientPacket packet = new ClientPacket("get", day);
+            ServerPacketReceiver.handle(packet, player);
+        }
+        else { //else just send error
+            ctx.getSource().sendError(Text.of("This command can only be run by a player."));
+        }
+
         return 1;
     }
 
     public static int runListAll(CommandContext<ServerCommandSource> ctx) {
-        // Code to list all days
-        ClientPacket.send("list_all", 0);
+        
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) { //if on client side send packet
+            ClientPacket.send("list_all", 0);
+        }
+        else if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) { //if on server side handle packet directly
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+            ClientPacket packet = new ClientPacket("list_all", 0);
+            ServerPacketReceiver.handle(packet, player);
+        }
+        else { //else just send error
+            ctx.getSource().sendError(Text.of("This command can only be run by a player."));
+        }
+
         return 1;
     }
 
     public static int runListMissed(CommandContext<ServerCommandSource> ctx) {
-        // Code to list missed days
-        ClientPacket.send("list_missed", 0);
+
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) { //if on client side send packet
+            ClientPacket.send("list_missed", 0);
+        }
+        else if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) { //if on server side handle packet directly
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+            ClientPacket packet = new ClientPacket("list_missed", 0);
+            ServerPacketReceiver.handle(packet, player);
+        }
+        else { //else just send error
+            ctx.getSource().sendError(Text.of("This command can only be run by a player."));
+        }
+
         return 1;
     }
 
     public static int runListAvailable(CommandContext<ServerCommandSource> ctx) {
-        // Code to list available days
-        ClientPacket.send("list_available", 0);
+
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) { //if on client side send packet
+            ClientPacket.send("list_available", 0);
+        }
+        else if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) { //if on server side handle packet directly
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+            ClientPacket packet = new ClientPacket("list_available", 0);
+            ServerPacketReceiver.handle(packet, player);
+        }
+        else { //else just send error
+            ctx.getSource().sendError(Text.of("This command can only be run by a player."));
+        }
+
         return 1;
     }
 
     public static int runUnclaimDay(CommandContext<ServerCommandSource> ctx, int day) {
-        // Code to unclaim a specific day
-        ClientPacket.send("unclaim", day);
+
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) { //if on client side send packet
+            ClientPacket.send("unclaim", day);
+        }
+        else if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) { //if on server side handle packet directly
+            ServerPlayerEntity player = ctx.getSource().getPlayer();
+            ClientPacket packet = new ClientPacket("unclaim", day);
+            ServerPacketReceiver.handle(packet, player);
+        }
+        else { //else just send error
+            ctx.getSource().sendError(Text.of("This command can only be run by a player."));
+        }
+        
         return 1;
     }
 }

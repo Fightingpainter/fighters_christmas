@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "fighters_christmas:block/snowglobe_on"
-  }
+    "parent": "block/cube",
+    "textures": {
+        "particle": "fighters_christmas:block/snowglobe_top_on",
+        "down": "fighters_christmas:block/snowglobe_bottom",
+        "up": "fighters_christmas:block/snowglobe_top_on",
+        "north": "fighters_christmas:block/snowglobe_side_on",
+        "south": "fighters_christmas:block/snowglobe_side_on",
+        "west": "fighters_christmas:block/snowglobe_side_on",
+        "east": "fighters_christmas:block/snowglobe_side_on"
+    }
 }

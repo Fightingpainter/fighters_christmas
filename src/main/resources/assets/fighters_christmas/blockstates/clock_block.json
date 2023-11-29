@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "is_night=false": { "model": "fighters_christmas:block/clock_block_day"},
+      "is_night=true": { "model": "fighters_christmas:block/clock_block_night"}
+    }
+}

@@ -1,4 +1,9 @@
 {
-    "block.fighters_christmas.snowglobe": "Globe Thingy"
+    "block.fighters_christmas.snowglobe": "Snowglobe",
+    "block.fighters_christmas.clock_block": "Clock Block",
+    "block.fighters_christmas.christmas_tree": "The Charging Tree of Cultivation",
+
+
+    "itemgroup.fighters_christmas.item_group": "Christmas"
 
 }

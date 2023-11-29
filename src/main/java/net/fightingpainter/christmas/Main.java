@@ -5,12 +5,13 @@ import net.fightingpainter.christmas.commands.ModCommands;
 import net.fightingpainter.christmas.custom.ModCustom;
 import net.fightingpainter.christmas.items.ModItems;
 import net.fightingpainter.christmas.packets.server.ServerPacketReceiver;
-
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 public class Main implements ModInitializer {
 

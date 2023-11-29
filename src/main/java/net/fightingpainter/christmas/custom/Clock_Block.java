@@ -17,17 +17,17 @@ import net.minecraft.world.World;
 
 import org.jetbrains.annotations.Nullable;
 
-public class Snowglobe_Block extends BlockWithEntity {
-    public static final BooleanProperty SNOWING = BooleanProperty.of("snowing");
+public class Clock_Block extends BlockWithEntity {
+    public static final BooleanProperty NIGHT = BooleanProperty.of("is_night");
 
-    public Snowglobe_Block(Settings settings) {
+    public Clock_Block(Settings settings) {
         super(settings);
-        setDefaultState(this.stateManager.getDefaultState().with(SNOWING, false));
+        setDefaultState(this.stateManager.getDefaultState().with(NIGHT, false));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(SNOWING);
+        builder.add(NIGHT);
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Snowglobe_Block extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new Snowglobe_BlockEntity(pos, state);
+        return new Clock_BlockEntity(pos, state);
 
     }
 
@@ -50,9 +50,9 @@ public class Snowglobe_Block extends BlockWithEntity {
 
             BlockEntity be = world.getBlockEntity(pos); //get the block entity
 
-            if (be instanceof Snowglobe_BlockEntity) { //check if correct block entity
+            if (be instanceof Clock_BlockEntity) { //check if correct block entity
 
-                Snowglobe_BlockEntity.onBlockInteracted((Snowglobe_BlockEntity) be, serverWorld, pos, state); //call the block entity method
+                Clock_BlockEntity.onBlockInteracted((Clock_BlockEntity) be, serverWorld, pos, state); //call the block entity method
             }
         }
         return ActionResult.SUCCESS; //return success
@@ -62,9 +62,9 @@ public class Snowglobe_Block extends BlockWithEntity {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (!world.isClient) {
-            return checkType(type, ModCustom.GLOBE_BLOCK_ENTITY_TYPE, (w, pos, st, be) -> {
-                if (be instanceof Snowglobe_BlockEntity) {
-                    ((Snowglobe_BlockEntity) be).tick(w, pos, st);
+            return checkType(type, ModCustom.CLOCK_BLOCK_ENTITY_TYPE, (w, pos, st, be) -> {
+                if (be instanceof Clock_BlockEntity) {
+                    ((Clock_BlockEntity) be).tick(w, pos, st);
                 }
             });
         }
