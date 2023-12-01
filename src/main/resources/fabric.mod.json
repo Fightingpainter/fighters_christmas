@@ -3,13 +3,12 @@
 	"id": "fighters_christmas",
 	"version": "${version}",
 	"name": "Fighter's Christmas",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is the Christmas mod for The Chrima modpack and adds some stuff to the game.",
 	"authors": [
-		"Me!"
+		"Fightingpianter"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Fightingpainter/fighters_christmas"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/fighters_christmas/icon.png",
@@ -29,7 +28,8 @@
 		"fabricloader": ">=0.14.24",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"owo": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
