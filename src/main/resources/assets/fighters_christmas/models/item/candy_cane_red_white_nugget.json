@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "fighters_christmas:item/candy_cane_red_white_nugget"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "OO ",
+        " I ",
+        " I "
+    ],
+    "key": {
+        "O": {
+            "item": "fighters_christmas:candy_cane"
+        },
+        "I": {
+            "item": "fighters_christmas:candy_cane_rod"
+        }
+    },
+    "result": {
+        "item": "fighters_christmas:candy_cane_hoe",
+        "count": 1
+    }
+  }
+  

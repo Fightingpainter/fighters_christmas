@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "fighters_christmas:candy_cane_rod"
+        }
+    ],
+    "result": {
+        "item": "fighters_christmas:candy_cane",
+        "count": 1
+    }
+}
+  

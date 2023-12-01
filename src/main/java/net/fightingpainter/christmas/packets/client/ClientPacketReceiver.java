@@ -1,8 +1,6 @@
 package net.fightingpainter.christmas.packets.client;
 
 import net.minecraft.util.Identifier;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fightingpainter.christmas.Main;
 import net.fightingpainter.christmas.packets.server.ServerPacket;

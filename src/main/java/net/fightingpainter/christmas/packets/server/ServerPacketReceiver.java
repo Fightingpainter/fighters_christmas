@@ -14,8 +14,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 
 import java.util.ArrayList;
@@ -31,7 +29,7 @@ public class ServerPacketReceiver {
         });
     }
 
-
+    
     //==========================================HANDLE==========================================
 
     // Method to handle the packet

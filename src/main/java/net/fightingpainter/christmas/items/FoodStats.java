@@ -25,13 +25,8 @@ public class FoodStats {
     .build();
 
     public static final FoodComponent CANDY_CANE = new FoodComponent.Builder()
-        .hunger(4)
-        .saturationModifier(8f)
+        .hunger(10)
+        .saturationModifier(20f)
     .build();
 
-
-
-
-
-    
 }

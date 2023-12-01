@@ -3,7 +3,26 @@
     "block.fighters_christmas.clock_block": "Clock Block",
     "block.fighters_christmas.christmas_tree": "The Charging Tree of Cultivation",
 
+    "item.fighters_christmas.candy_cane_sword": "Candy Cane Sword",
+    "item.fighters_christmas.candy_cane_pickaxe": "Candy Cane Pickaxe",
+    "item.fighters_christmas.candy_cane_axe": "Candy Cane Axe",
+    "item.fighters_christmas.candy_cane_shovel": "Candy Cane Shovel",
+    "item.fighters_christmas.candy_cane_hoe": "Candy Cane Hoe",
 
+    "item.fighters_christmas.candy_cane_multitool": "Candy Cane Multi-Tool",
+
+    "item.fighters_christmas.candy_cane": "Candy Cane",
+    "item.fighters_christmas.candy_cane_rod": "Candy Cane Rod",
+    "item.fighters_christmas.candy_cane_ingot": "Candy Cane Ingot",
+    "item.fighters_christmas.candy_cane_nugget": "Candy Cane Nugget",
+    "item.fighters_christmas.candy_cane_red_white_ingot": "Candy Cane Red White Ingot",
+    "item.fighters_christmas.candy_cane_red_white_nugget": "Candy Cane Red White Nugget",
+    "item.fighters_christmas.candy_cane_red_ingot": "Candy Cane Red Ingot",
+    "item.fighters_christmas.candy_cane_red_nugget": "Candy Cane Red Nugget",
+    "item.fighters_christmas.candy_cane_white_ingot": "Candy Cane White Ingot",
+    "item.fighters_christmas.candy_cane_white_nugget": "Candy Cane White Nugget",
+    "item.fighters_christmas.sugar_ingot": "Sugar Ingot",
+    "item.fighters_christmas.sugar_nugget": "Sugar Nugget",
+    
     "itemgroup.fighters_christmas.item_group": "Christmas"
-
 }

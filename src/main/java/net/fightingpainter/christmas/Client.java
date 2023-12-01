@@ -20,6 +20,8 @@ public class Client implements ClientModInitializer{
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModCustom.GLOBE_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModCustom.TREE_BLOCK, RenderLayer.getCutout());
+
+        
     }
     
 }

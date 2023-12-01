@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " II",
+        " I ",
+        " I "
+    ],
+    "key": {
+        "I": {
+            "item": "fighters_christmas:candy_cane_ingot"
+        }
+    },
+    "result": {
+        "item": "fighters_christmas:candy_cane",
+        "count": 1
+    }
+  }
+  

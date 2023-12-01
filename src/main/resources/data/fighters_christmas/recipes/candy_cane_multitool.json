@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "fighters_christmas:candy_cane_sword"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_pickaxe"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_axe"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_shovel"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_hoe"
+        },
+        {
+            "item": "minecraft:nether_star"
+        }
+    ],
+    "result": {
+        "item": "fighters_christmas:candy_cane_multitool",
+        "count": 1
+    }
+}

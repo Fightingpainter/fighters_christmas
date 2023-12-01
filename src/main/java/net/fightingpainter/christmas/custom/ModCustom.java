@@ -39,7 +39,7 @@ public class ModCustom {
         GLOBE_BLOCK = Registry.register(
             Registries.BLOCK,
             new Identifier(Main.MOD_ID, "snowglobe"), 
-            new Snowglobe_Block(FabricBlockSettings.copy(Blocks.GLASS).strength(10000f, 10000f).dropsLike(Blocks.COBBLESTONE).requiresTool().pistonBehavior(PistonBehavior.BLOCK))
+            new Snowglobe_Block(FabricBlockSettings.copy(Blocks.GLASS).strength(100000f, 100000f).dropsLike(Blocks.COBBLESTONE).requiresTool().pistonBehavior(PistonBehavior.BLOCK))
         );
 
         GLOBE_ITEM = Registry.register(
@@ -59,7 +59,7 @@ public class ModCustom {
         CLOCK_BLOCK = Registry.register(
             Registries.BLOCK, 
             new Identifier(Main.MOD_ID, "clock_block"), 
-            new Clock_Block(FabricBlockSettings.copy(Blocks.COBBLESTONE).strength(10000f, 10000f).requiresTool().pistonBehavior(PistonBehavior.BLOCK))
+            new Clock_Block(FabricBlockSettings.copy(Blocks.COBBLESTONE).strength(100000f, 100000f).requiresTool().pistonBehavior(PistonBehavior.BLOCK))
         );
 
         CLOCK_ITEM = Registry.register(
@@ -79,7 +79,7 @@ public class ModCustom {
         TREE_BLOCK = Registry.register(
             Registries.BLOCK, 
             new Identifier(Main.MOD_ID, "christmas_tree"), 
-            new ChristmasTree(FabricBlockSettings.copy(Blocks.OAK_SAPLING).strength(10000f, 10000f).pistonBehavior(PistonBehavior.BLOCK).nonOpaque().luminance((state) -> {return 15;}))
+            new ChristmasTree(FabricBlockSettings.copy(Blocks.OAK_SAPLING).strength(100000f, 100000f).pistonBehavior(PistonBehavior.BLOCK).nonOpaque().luminance((state) -> {return 15;}))
         );
 
         TREE_ITEM = Registry.register(

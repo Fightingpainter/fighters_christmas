@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        },
+        {
+            "item": "fighters_christmas:candy_cane_nugget"
+        }
+    ],
+    "result": {
+        "item": "fighters_christmas:candy_cane_ingot",
+        "count": 1
+    }
+}

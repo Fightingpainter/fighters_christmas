@@ -9,6 +9,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.WorldSavePath;
 
+import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
@@ -45,30 +47,19 @@ public class CalenderDataHandler {
             file.getParentFile().mkdirs(); // Create directories if they don't exist
 
         } catch (Exception e) { e.printStackTrace(); }
-
     }
 
     public static int getDay() {
-        //TODO: implement geting day logic later.
-        
-        //scuffed date setter so I can test the calender with different dates without having to restart everytime just to change the return value of this method
-        String content = "";
-        try {
-            File file = worldPath.resolve("data/"+Main.MOD_ID+"/scuffedDateSetter.txt").toFile();
-            if(!file.exists()){
-                file.getParentFile().mkdirs(); // Create directories if they don't exist
-                Files.write(file.toPath(), "1".getBytes()); // Write the default content to the file
-            }
+        LocalDate currentDate = LocalDate.now(); //get current date
 
-            content = Files.readString(file.toPath());
-        } catch (Exception e) { e.printStackTrace(); }
+        int day = currentDate.getDayOfMonth(); //get day of month
+        int month = currentDate.getMonthValue(); //get month
 
-        //parse content
-        int result = Integer.parseInt(content);
+        if (month != 12) return 0; //if it's not december return 0
+        if (day > 24) return 25; //if it's after the 24th return 0
 
-        return result;
+        return day;
     }
-
 
     public static List<Integer> getMissedDays(String uuid) {
         

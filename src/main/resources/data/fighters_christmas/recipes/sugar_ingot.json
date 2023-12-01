@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        },
+        {
+            "item": "fighters_christmas:sugar_nugget"
+        }
+    ],
+    "result": {
+        "item": "fighters_christmas:sugar_ingot",
+        "count": 1
+    }
+}
