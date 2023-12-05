@@ -4,7 +4,6 @@ import com.mojang.brigadier.CommandDispatcher;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fightingpainter.christmas.Main;
 import net.fightingpainter.christmas.packets.client.ClientPacket;
 import net.fightingpainter.christmas.packets.server.ServerPacketReceiver;
 import net.minecraft.server.command.CommandManager;

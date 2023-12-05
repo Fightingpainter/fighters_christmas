@@ -92,4 +92,10 @@ public class CandyCaneMultitool extends PickaxeItem {
 
         return ActionResult.FAIL;
     }
+
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
 }

@@ -1,7 +1,5 @@
 package net.fightingpainter.christmas;
 
-
-import net.fightingpainter.christmas.blocks.ModBlocks;
 import net.fightingpainter.christmas.custom.ModCustom;
 import net.fightingpainter.christmas.other.KeyHandler;
 import net.fightingpainter.christmas.packets.client.ClientPacketReceiver;

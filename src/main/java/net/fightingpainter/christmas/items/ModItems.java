@@ -4,16 +4,10 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fightingpainter.christmas.Main;
 import net.fightingpainter.christmas.custom.ModCustom;
-import net.fightingpainter.christmas.items.tools.CandyCaneMaterial;
-import net.fightingpainter.christmas.items.tools.CandyCaneMultitool;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
+import net.fightingpainter.christmas.items.tools.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -63,11 +57,11 @@ public class ModItems {
         CANDY_CANE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane"), new Item(new FabricItemSettings().food(FoodStats.CANDY_CANE)));
         CANDY_CANE_ROD = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_rod"), new Item(new FabricItemSettings().food(FoodStats.CANDY_CANE)));
         
-        CANDY_CANE_SWORD = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_sword"), new SwordItem(CandyCaneMaterial.CANDYCANE, 12, -1f, new FabricItemSettings()));
-        CANDY_CANE_PICKAXE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_pickaxe"), new PickaxeItem(CandyCaneMaterial.CANDYCANE, 6, -2.8f, new FabricItemSettings()));
-        CANDY_CANE_AXE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_axe"), new AxeItem(CandyCaneMaterial.CANDYCANE, 10, -3.0F, new FabricItemSettings()));
-        CANDY_CANE_SHOVEL = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_shovel"), new ShovelItem(CandyCaneMaterial.CANDYCANE, 6.5f, -3.0f, new FabricItemSettings()));
-        CANDY_CANE_HOE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_hoe"), new HoeItem(CandyCaneMaterial.CANDYCANE, 7, -2.4f, new FabricItemSettings()));
+        CANDY_CANE_SWORD = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_sword"), new CandyCaneSword(CandyCaneMaterial.CANDYCANE, 12, -1f, new FabricItemSettings()));
+        CANDY_CANE_PICKAXE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_pickaxe"), new CandyCanePickaxe(CandyCaneMaterial.CANDYCANE, 6, -2.8f, new FabricItemSettings()));
+        CANDY_CANE_AXE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_axe"), new CandyCaneAxe(CandyCaneMaterial.CANDYCANE, 10, -3.0f, new FabricItemSettings()));
+        CANDY_CANE_SHOVEL = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_shovel"), new CandyCaneShovel(CandyCaneMaterial.CANDYCANE, 6, -3.0f, new FabricItemSettings()));
+        CANDY_CANE_HOE = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_hoe"), new CandyCaneHoe(CandyCaneMaterial.CANDYCANE, 7, -2.4f, new FabricItemSettings()));
         
         CANDY_CANE_MULTITOOL = Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "candy_cane_multitool"), new CandyCaneMultitool(CandyCaneMaterial.CANDYCANE, 14, -3f, new FabricItemSettings()));
         

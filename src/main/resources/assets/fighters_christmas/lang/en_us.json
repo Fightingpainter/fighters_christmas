@@ -24,5 +24,10 @@
     "item.fighters_christmas.sugar_ingot": "Sugar Ingot",
     "item.fighters_christmas.sugar_nugget": "Sugar Nugget",
     
+    "key.category.fighters_christmas.christmas": "Christmas",
+    "key.fighters_christmas.calendar": "Open Advent Calendar",
+
     "itemgroup.fighters_christmas.item_group": "Christmas"
+
+    
 }
